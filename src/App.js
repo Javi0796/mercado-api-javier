@@ -66,9 +66,8 @@ class App extends Component {
   render(){
     return (
     <div className ="app container">
-     <h1>Javier Armando Ríos</h1>
+     <h1 class="text-center">Javier Armando Ríos</h1>
       <div className = "jumbotron">
-        <p className = "lead text-center">Mercado libre api</p> 
            
         <Buscador 
           datosBusqueda={this.datosBusqueda}
