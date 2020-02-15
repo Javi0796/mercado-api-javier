@@ -11,18 +11,23 @@ class App extends Component {
   }
 
   scroll = () => {
+    //Metodo que permite reiniciar la posición del scrolll al pasar de pagina
     const elemento =document.querySelector('.jumbotron');
     elemento.scrollIntoView('smooth', 'end');
   }
 
   paginaAnterior = () =>{
+    //Lee la variable pagina
     let pagina = this.state.pagina;
+    //Si la pagia es 1, significa que esta en la primera pagina, por lo cual no existe una pagina anterior
     if(pagina==1) return null;
+    //Resta 1 a la variable pagina, para retroceder 1 pagina
     pagina--;
     this.setState(
       {
         pagina
       },() => {
+        //Llama el metodo consultarApi para actualizar los datos
         this.consultarApi();
         this.scroll();
       }
@@ -31,12 +36,15 @@ class App extends Component {
   }
 
   paginaSiguiente = () =>{
-    
+    //Lee la variable pagina
     let pagina = this.state.pagina;
+    //Suma 1 a la variable pagina, para avanzar 1 pagina
     pagina++;
+    //Actualiza los datos
     this.setState({
       pagina
     }, () => {
+      //Llama el metodo consultarApi para actualizar los datos
       this.consultarApi();
       this.scroll();
     }    
@@ -46,7 +54,10 @@ class App extends Component {
 
   consultarApi = () =>{
     const pagina = this.state.pagina;
-    const url = `https://api.mercadolibre.com/sites/MCO/search?q=${this.state.termino}&offset=${pagina}`
+    //Modifica el estado de la variable pagina, agregando los datos extraidos del input
+    const termino = this.state.termino;
+    //Uso del api de mercado libre, hace el llamado con el dato requerido por el usuario
+    const url = `https://api.mercadolibre.com/sites/MCO/search?q=${termino}&offset=${pagina}`
     fetch(url)
     .then(respuesta => respuesta.json())
     .then(resultado => this.setState({ productos : resultado.results}))
