@@ -66,6 +66,7 @@ class App extends Component {
 
   datosBusqueda = (termino) =>{
     this.setState({
+      //inicializa las variables con los datos requeridos
       termino : termino,
       pagina : 1
       
@@ -78,7 +79,7 @@ class App extends Component {
     return (
     <div className ="app container">
      <h1 class="text-center">Javier Armando Ríos</h1>
-      <div className = "jumbotron">
+      <div className = "jumbotron jumbotron-fluid">
            
         <Buscador 
           datosBusqueda={this.datosBusqueda}
