@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   consultarApi = () =>{
-    const pagina = this.state.pagina+50;
+    const pagina = this.state.pagina*50;
     //Modifica el estado de la variable pagina, agregando los datos extraidos del input
     const termino = this.state.termino;
     //Uso del api de mercado libre, hace el llamado con el dato requerido por el usuario

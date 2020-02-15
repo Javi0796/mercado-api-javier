@@ -11,7 +11,7 @@ const Producto = (props) => {
                 <div className="card text-center">
                     <img src={thumbnail} alt={title} className="card-img-top"/>
                     <div className ="card-body">    
-                        <p className="card-text"> {title} </p>              
+                        <p className="card-text"> {title.substring(0,20)}... </p>              
                         <p className="card-text"> Precio ${price}</p>
                         <p className="card-text"> Cantidad disponible {available_quantity}</p>
                         <p className="card-text"> Id vendedor {seller.id}</p>
