@@ -17,7 +17,7 @@ class Buscador extends Component {
         return (
             <form onSubmit = {this.obtenerDatos}>
                 <div className = "row">
-                    <div className = "form-group col-md-8">
+                    <div className = "form-group col-md-6">
                         <input ref={this.busquedaRef} type= "text" className = "form-control form-control-lg" placeholder="Busca
                          el producto deseado"/>
                      

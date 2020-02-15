@@ -5,10 +5,11 @@ const Producto = (props) => {
     const {permalink, thumbnail, title, price, available_quantity, seller} = props.producto;
 
     return(
-        <div>
-            <div className="col-12 col-sm-5 col-md-5 col-lg-3 mb-5 row no-gutters" >
-                <div className="card text-center" >
-                    <img src={thumbnail} alt={title} className="card-img-top img-fluid"/>
+        
+        <div row>
+            <div className="col-12 col-sm-5 col-md-5 col-lg-3 mb-5" >
+                <div className="card text-center">
+                    <img src={thumbnail} alt={title} className="card-img-top"/>
                     <div className ="card-body">    
                         <p className="card-text"> {title} </p>              
                         <p className="card-text"> Precio ${price}</p>
@@ -20,6 +21,7 @@ const Producto = (props) => {
                 </div>
             </div>
         </div>
+        
     )
 
 }

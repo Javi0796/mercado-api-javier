@@ -13,7 +13,7 @@ class Busqueda extends Component {
         //Invoca los componentes para mostrar los productos y la paginación
         return (
             <React.Fragment>
-                <div className="col-12 p-5 row">
+                <div className="col-12 p-8 row">
                     {productos.map(producto => (
                         <Producto
                             key={producto.id}

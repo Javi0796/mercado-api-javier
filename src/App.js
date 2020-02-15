@@ -85,7 +85,7 @@ class App extends Component {
           datosBusqueda={this.datosBusqueda}
         />
       </div>
-      <div className="row justify-content-center">
+      <div class="row justify-content-center">
         <Busqueda
          productos={this.state.productos}
          paginaAnterior={this.paginaAnterior}
